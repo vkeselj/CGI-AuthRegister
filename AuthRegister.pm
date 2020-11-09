@@ -2,7 +2,6 @@
 # CGI::AuthRegister - AuthRegister Module for Simple CGI Authentication and
 #   Registration in Perl
 # (c) 2012-20 Vlado Keselj http://vlado.ca
-# Last update: 2020-11-09
 
 package CGI::AuthRegister;
 use strict;
@@ -10,7 +9,7 @@ use vars qw($NAME $ABSTRACT $VERSION);
 $NAME     = 'AuthRegister';
 $ABSTRACT = 'AuthRegister Module for Simple CGI Authentication and '.
   'Registration in Perl';
-$VERSION  = '1.401';
+$VERSION  = '1.402'; # Last update: 2020-11-09
 
 use CGI qw(:standard);
 # Useful diagnostics:

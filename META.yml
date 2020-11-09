@@ -1,7 +1,7 @@
 --- #YAML:1.0
 name: CGI::AuthRegister
 abstract: AuthRegister Module for Simple CGI Authentication and Registration in Perl
-version: 1.401
+version: 1.402
 authored_by:
   - Vlado Keselj (cpan:vlado vlado@dnlp.ca http://vlado.ca)
 license: perl

@@ -1,5 +1,6 @@
 # file: Makefile.PL
-# CGI::AuthRegister - AuthRegister Module for Simple CGI Authentication and Registration in Perl
+# CGI::AuthRegister - AuthRegister Module for Simple CGI Authentication and
+#   Registration in Perl
 # (c) 2012-20 Vlado Keselj (cpan:vlado vlado.ca http://vlado.ca)
 use ExtUtils::MakeMaker;
 
@@ -8,7 +9,10 @@ WriteMakefile(
   'ABSTRACT'     => 'AuthRegister Module for Simple CGI Authentication'.
                     ' and Registration in Perl',
   'VERSION_FROM' => 'AuthRegister.pm', # finds $VERSION
-  'PREREQ_PM'    => { 'CGI' => 0, }, # some dependence on CGI
+  'PREREQ_PM'    => {
+    'CGI' => 0,                     # some dependence on CGI
+    'HTTP::Request::Common' => '0', # required if used with CAS functionality
+  }, 
   (5.020003 >= 5.005 ?    ## Add these new keywords supported since 5.005
     ( AUTHOR => 'Vlado Keselj (cpan:vlado vlado.ca http://vlado.ca)') : ()),
     'dist'  => {'COMPRESS'=>'gzip', 'SUFFIX' => 'gz'},

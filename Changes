@@ -1,5 +1,13 @@
 Revision history for Perl extension CGI::Authenticate
 
+1.402 Wed Nov 11 08:57:45 AST 2020
+ - bug report: module HTTP::Request::Common is used but not declared
+   in Makefile.PL; It is declared now.
+ - Note: There are some other module dependencies, which are required
+   at runtime and report error if not available. This was done since
+   they are not required for core functionality.  Maybe this should be
+   fixed and maybe they should be required for the whole module.
+
 1.401 Mon Nov  9 09:02:02 AST 2020
  - added GitHub repository information (thanks to Gabor Szabo)
 
