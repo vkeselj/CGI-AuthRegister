@@ -1,6 +1,10 @@
 Revision history for Perl extension CGI::Authenticate
 
-1.3 Current version under development
+1.4 Mon Nov  9 06:48:38 AST 2020
+ - added CGI dependency: the module requires CGI, which need to be
+   indicated; it should be removed over time
+
+1.3 Sun Nov  8 20:09:00 AST 2020
  - documentation improvements
  - Net::LDAP only required if LDAP functionality is needed (changed
    "use Net::LDAP" to 'eval "require Net::LDAP;"'

@@ -10,7 +10,7 @@ use vars qw($NAME $ABSTRACT $VERSION);
 $NAME     = 'AuthRegister';
 $ABSTRACT = 'AuthRegister Module for Simple CGI Authentication and '.
   'Registration in Perl';
-$VERSION  = '1.3';
+$VERSION  = '1.4';
 
 use CGI qw(:standard);
 # Useful diagnostics:
