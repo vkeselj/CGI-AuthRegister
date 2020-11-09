@@ -13,9 +13,15 @@ WriteMakefile(
     ( AUTHOR => 'Vlado Keselj (cpan:vlado vlado.ca http://vlado.ca)') : ()),
     'dist'  => {'COMPRESS'=>'gzip', 'SUFFIX' => 'gz'},
   'clean' => {FILES => "tmp* *~"},
-  EXE_FILES => [], # eg:[ 'bin/some_program' ],
+  EXE_FILES => [], #eg:[ 'bin/some_program' ],
   PMLIBDIRS => [], #eg:[ 'Package/samples', 'Package/samples/1' ],
-);
+  (eval { ExtUtils::MakeMaker->VERSION(6.46) } ? (META_MERGE => {
+    'meta-spec' => { version => 2 },
+    resources => { repository => {
+      type => 'git',
+      url => 'https://github.com/vkeselj/CGI-AuthRegister.git',
+      web => 'https://github.com/vkeselj/CGI-AuthRegister',
+}}}) : () ));
 
 # private parts of Makefile
 open(M, ">>Makefile") or die;
