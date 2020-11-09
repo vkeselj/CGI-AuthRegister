@@ -1,0 +1,35 @@
+CGI::AuthRegister version 1.3
+=============================
+
+The CGI::AuthRegister module provides a simple, transparent, and
+flexible framework for authentication and registration of users
+through CGI programs implemented in Perl.  Further documentation is a
+part of the file AuthRegister.pm in pod format.  The convert it in
+other formats, such as HTML, you can use a command such as:
+
+	  pod2html AuthRegister.pm
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+If you do not have permissions to install the module in the
+system-wide module repository, you can install it locally; e.g.,
+perl Makefile.PL PREFIX=/home/mydir
+
+DEPENDENCIES
+
+No significant dependencies.
+
+COPYRIGHT AND LICENCE
+
+Copyright 2012-20 Vlado Keselj http://vlado.ca
+
+This script is provided "as is" without express or implied warranty.
+This is free software; you can redistribute it and/or modify it under
+the same terms as Perl itself.

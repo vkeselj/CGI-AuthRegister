@@ -1,0 +1,11 @@
+README
+MANIFEST
+META.yml
+starfish.conf
+Changes
+Makefile.PL
+starfish.conf
+test.pl
+AuthRegister.pm
+examples/1/index.cgi
+examples/2/index.cgi
