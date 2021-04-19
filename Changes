@@ -1,5 +1,8 @@
 Revision history for Perl extension CGI::Authenticate
 
+1.403 current version under development
+ - better error report if userid is not in users.db
+
 1.402 Wed Nov 11 08:57:45 AST 2020
  - bug report: module HTTP::Request::Common is used but not declared
    in Makefile.PL; It is declared now.

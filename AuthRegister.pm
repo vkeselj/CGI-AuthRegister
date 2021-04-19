@@ -1,7 +1,7 @@
 # file: AuthRegister.pm
 # CGI::AuthRegister - AuthRegister Module for Simple CGI Authentication and
 #   Registration in Perl
-# (c) 2012-20 Vlado Keselj http://vlado.ca
+# (c) 2012-21 Vlado Keselj http://vlado.ca
 
 package CGI::AuthRegister;
 use strict;
@@ -9,7 +9,7 @@ use vars qw($NAME $ABSTRACT $VERSION);
 $NAME     = 'AuthRegister';
 $ABSTRACT = 'AuthRegister Module for Simple CGI Authentication and '.
   'Registration in Perl';
-$VERSION  = '1.402'; # Last update: 2020-11-09
+$VERSION  = '1.403'; # Last update: 2021-04-19
 
 use CGI qw(:standard);
 # Useful diagnostics:
@@ -408,10 +408,12 @@ sub _require_login_using_cas {
   my $u = ($AddAuthenticatedUser ? &get_user_by_userid_or_add($username) :
 	   &get_user_unique('userid', $username));
   if ($u eq '') {
-    $Error.="408-ERR: no userid ($username)\n";
+    $Error.="411-ERR: no userid ($username) in users.db\n";
     $LogReport.=$Error; &store_log;
     print header(); if ($retStatus) { return 'login failed'; }
-    print $HTMLstart, "Unsuccessful login!\n"; &store_log; exit; }
+    print $HTMLstart,
+      "Unsuccessful login! (username not in users.db, ERR-414)\n";
+    &store_log; exit; }
   $User = $u; &set_new_session($User);
   $LogReport.="User $UserEmail logged in.\n"; &store_log;
   print header_session_cookie(); return 1;
