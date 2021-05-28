@@ -9,3 +9,4 @@ test.pl
 AuthRegister.pm
 examples/1/index.cgi
 examples/2/index.cgi
+examples/8-simple-auto-register/index.cgi
